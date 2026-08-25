@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="650" viewBox="0 0 1600 650" role="img" aria-labelledby="title desc">
+  <title id="title">Bidirectional USRP B210 IP radio link architecture</title>
+  <desc id="desc">Two parallel flows show the forward direction from Node A to Node B and the return direction from Node B to Node A.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#53657d"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-15%" width="120%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#172033" flood-opacity="0.14"/>
+    </filter>
+    <style>
+      .canvas { fill: #f8fafc; }
+      .panel { fill: #ffffff; stroke: #d8e1ec; stroke-width: 2; }
+      .heading { fill: #172033; font-family: Arial, Helvetica, sans-serif; font-size: 38px; font-weight: 700; }
+      .direction { fill: #31435d; font-family: Arial, Helvetica, sans-serif; font-size: 28px; font-weight: 700; }
+      .node { stroke-width: 2; filter: url(#shadow); }
+      .node-text { fill: #172033; font-family: Arial, Helvetica, sans-serif; font-size: 26px; font-weight: 700; text-anchor: middle; }
+      .subtext { fill: #40536d; font-family: Arial, Helvetica, sans-serif; font-size: 22px; font-weight: 500; text-anchor: middle; }
+      .arrow { fill: none; stroke: #53657d; stroke-width: 4; marker-end: url(#arrow); }
+      .ip { fill: #e9f2ff; stroke: #5682c7; }
+      .adapt { fill: #f0edff; stroke: #7768c7; }
+      .tx { fill: #fff1dc; stroke: #d88a27; }
+      .rf { fill: #ffe9eb; stroke: #d95f68; }
+      .rx { fill: #e5f8f6; stroke: #359d94; }
+      .valid { fill: #eaf7ed; stroke: #4c9b61; }
+    </style>
+  </defs>
+
+  <rect class="canvas" width="1600" height="650" rx="24"/>
+  <text class="heading" x="55" y="54">Bidirectional IP-over-Radio System Overview</text>
+
+  <rect class="panel" x="40" y="82" width="1520" height="238" rx="20"/>
+  <text class="direction" x="70" y="122">Forward Direction: Node A → Node B</text>
+
+  <rect class="node ip" x="55" y="164" width="180" height="94" rx="16"/>
+  <text class="node-text" x="145" y="202">Node A</text><text class="subtext" x="145" y="230">IP Traffic</text>
+  <rect class="node adapt" x="273" y="164" width="180" height="94" rx="16"/>
+  <text class="node-text" x="363" y="199">Interface &amp;</text><text class="subtext" x="363" y="229">Adaptation</text>
+  <rect class="node tx" x="491" y="164" width="180" height="94" rx="16"/>
+  <text class="node-text" x="581" y="202">GMSK TX</text><text class="subtext" x="581" y="230">SDR Processing</text>
+  <rect class="node rf" x="709" y="164" width="180" height="94" rx="16"/>
+  <text class="node-text" x="799" y="202">RF Path</text><text class="subtext" x="799" y="230">A → B</text>
+  <rect class="node rx" x="927" y="164" width="180" height="94" rx="16"/>
+  <text class="node-text" x="1017" y="202">GMSK RX</text><text class="subtext" x="1017" y="230">SDR Recovery</text>
+  <rect class="node valid" x="1145" y="164" width="180" height="94" rx="16"/>
+  <text class="node-text" x="1235" y="199">Validate &amp;</text><text class="subtext" x="1235" y="229">Deliver</text>
+  <rect class="node ip" x="1363" y="164" width="180" height="94" rx="16"/>
+  <text class="node-text" x="1453" y="202">Node B</text><text class="subtext" x="1453" y="230">IP Traffic</text>
+
+  <path class="arrow" d="M235 211 H264"/><path class="arrow" d="M453 211 H482"/>
+  <path class="arrow" d="M671 211 H700"/><path class="arrow" d="M889 211 H918"/>
+  <path class="arrow" d="M1107 211 H1136"/><path class="arrow" d="M1325 211 H1354"/>
+
+  <rect class="panel" x="40" y="342" width="1520" height="238" rx="20"/>
+  <text class="direction" x="70" y="382">Return Direction: Node B → Node A</text>
+
+  <rect class="node ip" x="55" y="424" width="180" height="94" rx="16"/>
+  <text class="node-text" x="145" y="462">Node B</text><text class="subtext" x="145" y="490">IP Traffic</text>
+  <rect class="node adapt" x="273" y="424" width="180" height="94" rx="16"/>
+  <text class="node-text" x="363" y="459">Interface &amp;</text><text class="subtext" x="363" y="489">Adaptation</text>
+  <rect class="node tx" x="491" y="424" width="180" height="94" rx="16"/>
+  <text class="node-text" x="581" y="462">GMSK TX</text><text class="subtext" x="581" y="490">SDR Processing</text>
+  <rect class="node rf" x="709" y="424" width="180" height="94" rx="16"/>
+  <text class="node-text" x="799" y="462">RF Path</text><text class="subtext" x="799" y="490">B → A</text>
+  <rect class="node rx" x="927" y="424" width="180" height="94" rx="16"/>
+  <text class="node-text" x="1017" y="462">GMSK RX</text><text class="subtext" x="1017" y="490">SDR Recovery</text>
+  <rect class="node valid" x="1145" y="424" width="180" height="94" rx="16"/>
+  <text class="node-text" x="1235" y="459">Validate &amp;</text><text class="subtext" x="1235" y="489">Deliver</text>
+  <rect class="node ip" x="1363" y="424" width="180" height="94" rx="16"/>
+  <text class="node-text" x="1453" y="462">Node A</text><text class="subtext" x="1453" y="490">IP Traffic</text>
+
+  <path class="arrow" d="M235 471 H264"/><path class="arrow" d="M453 471 H482"/>
+  <path class="arrow" d="M671 471 H700"/><path class="arrow" d="M889 471 H918"/>
+  <path class="arrow" d="M1107 471 H1136"/><path class="arrow" d="M1325 471 H1354"/>
+
+  <text class="subtext" x="800" y="620">Two complementary one-way radio paths form the complete bidirectional link.</text>
+</svg>
